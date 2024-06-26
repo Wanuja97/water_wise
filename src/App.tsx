@@ -1,35 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// import packages
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 
-function App() {
-  const [count, setCount] = useState(0)
+// import admin pages
+import AdminAuthPage from "./pages/admin/AdminAuthPage"
+import AdminDashboard from "./pages/admin/AdminDashboard"
+
+// import client pages
+import ClientDashboard from "./pages/client/ClientDashboard"
+import ClientAuthPage from "./pages/client/ClientAuthPage"
+
+export default function App() {
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<ClientAuthPage/>} />
+        <Route path="/admin/login" element={<AdminAuthPage/>} />
+        <Route path="/dashboard" element={<ClientDashboard/>} />
+        <Route path="/admin/dashboard" element={<AdminDashboard/>} />
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }
 
-export default App

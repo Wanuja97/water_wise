@@ -1,4 +1,4 @@
-import React from 'react';
+// import static contents
 import Logo from '../assets/logo1.jpeg';
 
 function Navbar() {

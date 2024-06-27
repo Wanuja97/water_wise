@@ -1,6 +1,10 @@
-
+// import components
+import Navbar from "../../components/Navbar"
 export default function ClientDashboard() {
   return (
-    <div>UserDashboard</div>
+    <div>
+      {/* Navbar */}
+      <Navbar />
+    </div>
   )
 }

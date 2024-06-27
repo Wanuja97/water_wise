@@ -2,13 +2,23 @@
 import Logo from '../../assets/logo1.jpeg'
 import BackgroundImage from '../../assets/aqua_auto_login.png'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 export default function ClientAuthPage() {
+  const navigate = useNavigate();
   const [isLoginForm, setLoginForm] = useState(false);
   const [isSignUpForm, setSignUpForm] = useState(true);
 
   const handleAuthForms = () => {
     setLoginForm(!isLoginForm);
     setSignUpForm(!isSignUpForm);
+  }
+
+  const handleSubmitSignInForm = ()=>{
+    navigate('/dashboard')
+  }
+
+  const handleSubmitRegisterForm = ()=>{
+    navigate('/dashboard')
   }
   return (
     <>
@@ -29,7 +39,8 @@ export default function ClientAuthPage() {
                 </h2>
                 <div className="w-full flex-1 mt-8">
                   <div className="mx-auto max-w-xs">
-                    <form >
+                    <form 
+                    onSubmit={handleSubmitRegisterForm}>
                       <input
                         className="w-full px-8 py-3 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
                         type="email" placeholder="Email" required />
@@ -81,7 +92,8 @@ export default function ClientAuthPage() {
                   </h2>
                   <div className="w-full flex-1 mt-8">
                     <div className="mx-auto max-w-xs">
-                      <form >
+                      <form 
+                      onSubmit={handleSubmitSignInForm}>
                         <input
                           className="w-full px-8 py-3 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
                           type="text" placeholder="User Name" required />

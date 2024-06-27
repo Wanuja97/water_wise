@@ -1,5 +1,5 @@
 // import static contents
-import Logo from '../../assets/aqua-auto-white-bg.png'
+import Logo from '../../assets/logo1.jpeg'
 
 export default function AdminAuthPage() {
   return (
@@ -7,12 +7,13 @@ export default function AdminAuthPage() {
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
-            className="mx-auto h-40 w-auto m-0 p-0"
+            className="mx-auto h-18 w-auto m-0 p-0"
             src={Logo}
             alt="aqua-auto-logo"
           />
-          <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-            Water Wise - Admin Login
+          {/* <h2 className='font-extrabold text-center text-xl'>Welcome Back !!!</h2> */}
+          <h2 className="font-extrabold mt-0 text-center text-2xl leading-9 tracking-tight text-gray-900">
+            Admin Login
           </h2>
         </div>
 
@@ -55,8 +56,7 @@ export default function AdminAuthPage() {
             <div>
               <button
                 type="submit"
-                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
+                className="mt-5 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-3 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
                 Sign in
               </button>
             </div>

@@ -1,8 +1,8 @@
 
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, LineElement, PointElement, LinearScale, Title, CategoryScale } from 'chart.js';
-import TurbidityLevelImage from '../assets/turbidity_level_icon.png';
-import water_level_icon from '../assets/water_level_icon.png';
+import TurbidityLevelImage from '../../assets/turbidity_level_icon.png';
+import water_level_icon from '../../assets/water_level_icon.png';
 
 // Register necessary chart components
 ChartJS.register(LineElement, PointElement, LinearScale, Title, CategoryScale);

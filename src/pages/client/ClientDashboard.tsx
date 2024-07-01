@@ -1,8 +1,8 @@
 // import components
-import Navbar from "../../components/Navbar"
-import UserProfile from "../../components/UserProfile"
-import ControlPanel from "../../components/ControlPanel"
-import RealTimeData from "../../components/RealTimeData"
+import Navbar from "../../components/common-components/Navbar"
+import UserProfile from "../../components/user-components/UserProfile"
+import ControlPanel from "../../components/user-components/ControlPanel"
+import RealTimeData from "../../components/user-components/RealTimeData"
 
 export default function ClientDashboard() {
   return (

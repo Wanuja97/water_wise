@@ -1,5 +1,4 @@
-import { useState } from 'react';
-
+import { useState, ChangeEvent } from 'react';
 function UserProfile() {
     const [isEditing, setIsEditing] = useState(false);
     const [profile, setProfile] = useState({
@@ -19,12 +18,12 @@ function UserProfile() {
         setIsEditing(false);
     };
 
-    const handleChange = (e) => {
+    const handleChange = (e:ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         setProfile({ ...profile, [name]: value });
     };
 
-    const handlePasswordChange = (e) => {
+    const handlePasswordChange = (e:ChangeEvent<HTMLInputElement>) => {
         setPassword(e.target.value);
     };
 

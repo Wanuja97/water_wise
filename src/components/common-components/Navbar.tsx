@@ -1,5 +1,5 @@
 // import static contents
-import Logo from '../assets/logo1.jpeg';
+import Logo from '../../assets/logo1.jpeg';
 
 function Navbar() {
     return (

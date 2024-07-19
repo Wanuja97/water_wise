@@ -3,6 +3,7 @@ import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, LineElement, PointElement, LinearScale, Title, CategoryScale } from 'chart.js';
 import TurbidityLevelImage from '../../assets/turbidity_level_icon.png';
 import water_level_icon from '../../assets/water_level_icon.png';
+import temperatureImage from '../../assets/temperature.png'
 
 // Register necessary chart components
 ChartJS.register(LineElement, PointElement, LinearScale, Title, CategoryScale);
@@ -11,6 +12,7 @@ function RealTimeData() {
   // Dummy data
   const currentWaterLevel = "35 centimeters";
   const turbidityLevel = "12 NTU";
+  const temperature = "15";
   const waterUsageDataInLastDay = [10, 15, 9, 13, 18, 20, 15, 9, 13, 18, 20, 15, 9, 13, 18, 20, 5, 0, 1, 2, 3,4,1, 4];
   const turbidityDatainLastday = [5, 10, 8, 12, 15, 14, 11, 9, 13, 18, 20, 15, 9, 13, 18, 20, 15, 12, 21, 20, 22, 22, 24, 21];
 
@@ -86,7 +88,7 @@ function RealTimeData() {
         </button>
       </div>
       {/* Row 01 */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mb-4">
         {/* Current Water Level */}
         <div className="flex items-center p-4 bg-blue-100 rounded-lg shadow">
           <img src={water_level_icon} alt="Water_Level_Icon" className="mr-4 w-12 h-12" />
@@ -103,7 +105,16 @@ function RealTimeData() {
             <p className="text-md font-semibold text-gray-600">{turbidityLevel}</p>
           </div>
         </div>
+        {/* Current Water Level */}
+      <div className="flex items-center p-4 bg-blue-100 rounded-lg shadow">
+          <img src={temperatureImage} alt="temperature_Icon" className="mr-4 w-12 h-12" />
+          <div>
+            <h3 className="text-lg font-bold">Current Water Temperature</h3>
+            <p className="text-md font-semibold text-gray-600">{temperature} Celcius</p>
+          </div>
+        </div>
       </div>
+      
       {/* Row 02 */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Water Usage Graph */}
